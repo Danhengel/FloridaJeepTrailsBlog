@@ -1,5 +1,7 @@
-const Sequelize = require('sequelize');
-require('dotenv').config(); // Import sensitive data from .env
+import Sequelize from 'sequelize';
+import dotenv from 'dotenv'; // Import sensitive data from .env
+
+dotenv.config();
 
 const sequelize = process.env.JAWSDB_URL 
   ? new Sequelize(process.env.JAWSDB_URL) // JAWSDB_URL is for HEROKU
@@ -11,4 +13,4 @@ const sequelize = process.env.JAWSDB_URL
       },
     });
 
-module.exports = sequelize;
+export default sequelize;

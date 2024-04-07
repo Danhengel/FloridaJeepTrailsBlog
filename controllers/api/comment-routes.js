@@ -1,5 +1,6 @@
 // Import the required modules
-const router = require("express").Router();
+import { Router } from "express";
+const router = Router();
 const { Comment } = require("../../models");
 const withAuth = require("../../utils/auth");
 // Create a new comment

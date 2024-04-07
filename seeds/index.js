@@ -1,5 +1,5 @@
 
-const seedUsers = require("./userData");
+import seedUsers from "./userData";
 const seedPosts = require("./postData");
 const seedComments = require("./commentData");
 

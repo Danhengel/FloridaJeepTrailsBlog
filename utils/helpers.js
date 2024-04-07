@@ -1,4 +1,4 @@
-module.exports = {
+export const helpers = {
     format_date: (date) => {
       
       const d = new Date(date);

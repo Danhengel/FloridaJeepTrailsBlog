@@ -1,8 +1,9 @@
-const router = require("express").Router();
-const { Post, User, Comment } = require("../../models");
-const withAuth = require("../../utils/auth");
+import express from "express";
+const router = express.Router();
+import { Post, User, Comment } from "../../models";
+import withAuth from "../../utils/auth";
 // Get all posts with associated username
-router.get("/", async (req, res) => {
+router.get("/", async (_, res) => {
   try {
     const postData = await Post.findAll({
       include: [{ model: User, attributes: ["username"] }],

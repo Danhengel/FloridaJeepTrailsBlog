@@ -1,4 +1,4 @@
-const { Post } = require("../models");
+import { Post } from "../models";
 
 const postData = [
   {

@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 const deletePost = async (post_id) => {
     const response = await fetch(`/api/posts/${post_id}`, {
       method: "DELETE",

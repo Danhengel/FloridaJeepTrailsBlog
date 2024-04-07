@@ -1,6 +1,8 @@
 // Import necessary modules
-const router = require("express").Router();
-const { User } = require("../../models");
+import express from "express";
+import { User } from "../../models";
+
+const router = express.Router();
 
 // Route to get all users
 router.get("/", (req, res) => {
@@ -13,6 +15,7 @@ router.get("/", (req, res) => {
       res.status(500).json(err);
     });
 });
+
 // Route to sign up a new user
 router.post("/signup", async (req, res) => {
   try {

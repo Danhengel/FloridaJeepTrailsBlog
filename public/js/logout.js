@@ -1,3 +1,6 @@
+import { fetch } from 'node-fetch'; // Import the fetch function
+import { alert } from 'node-alert'; // Import the alert function
+
 // Logout function to send request to log out the user
 const chessLogout = async () => {
     const response = await fetch('/api/users/logout', {
